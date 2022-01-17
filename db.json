@@ -1,5 +1,12 @@
-[
-  {
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "This is Awesome",
+      "content": "Everything is awesome"
+    }
+  ],
+  "profile": {
     "name": "Manuel"
   }
-]
+}
