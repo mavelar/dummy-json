@@ -3,33 +3,31 @@ port: 3000
 
 endpoints:
 
-  - path: /vtex/payments
-    method: post
+- path: /vtex/payments
+  method: post
 
-    responses:
-      - statusCode: 200
-        body:
-          {
-            "paymentId": "5B127F1E0C944EF9ACE264FEC1FC0E91",
-            "status": "",
-            "authorizationId": "AUT-E4B9C36034-ASYNC",
-            "paymentUrl":
-            "https://exemplo2.vtexpayments.com.br/api/pub/fake-payment-provider/payment-redirect/611966/payments/5B127F1E0C944EF9ACE264FEC1FC0E91",
-            "nsu": "NSU-171BE62CB7-ASYNC",
-            "tid": "TID-20E659E8E5-ASYNC",
-            "acquirer": "TestPay",
-            "code": "2000-ASYNC",
-            "message": null,
-            "delayToAutoSettle": 21600,
-            "delayToAutoSettleAfterAntifraud": 1800,
-            "delayToCancel": 21600
-          }
+  responses:
+    - statusCode: 200
+      body:
+        {
+          "paymentId": "5B127F1E0C944EF9ACE264FEC1FC0E91",
+          "status": "",
+          "authorizationId": "AUT-E4B9C36034-ASYNC",
+          "paymentUrl":
+          "https://exemplo2.vtexpayments.com.br/api/pub/fake-payment-provider/payment-redirect/611966/payments/5B127F1E0C944EF9ACE264FEC1FC0E91",
+          "nsu": "NSU-171BE62CB7-ASYNC",
+          "tid": "TID-20E659E8E5-ASYNC",
+          "acquirer": "TestPay",
+          "code": "2000-ASYNC",
+          "message": null,
+          "delayToAutoSettle": 21600,
+          "delayToAutoSettleAfterAntifraud": 1800,
+          "delayToCancel": 21600
+        }
 
-  - path: /vtex/delay
-    method: get
-    
-    responses:
-      - statusCode: 200
-        delay: 500
-        body:
-        message: delayed by 500 ms
+- path: /delay
+  method: get
+  responses: - statusCode: 200
+  delay: 500
+  body:
+  message: delayed by 500 ms
