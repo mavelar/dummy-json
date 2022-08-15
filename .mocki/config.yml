@@ -11,7 +11,7 @@ endpoints:
         body:
           {
             "paymentId": "5B127F1E0C944EF9ACE264FEC1FC0E91",
-            "status": "undefined",
+            "status": "",
             "authorizationId": "AUT-E4B9C36034-ASYNC",
             "paymentUrl":
             "https://exemplo2.vtexpayments.com.br/api/pub/fake-payment-provider/payment-redirect/611966/payments/5B127F1E0C944EF9ACE264FEC1FC0E91",
@@ -24,3 +24,12 @@ endpoints:
             "delayToAutoSettleAfterAntifraud": 1800,
             "delayToCancel": 21600
           }
+
+  - path: /vtex/delay
+    method: get
+    
+    responses:
+      - statusCode: 200
+        delay: 500
+        body:
+        message: delayed by 500 ms
